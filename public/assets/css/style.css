@@ -1050,6 +1050,57 @@ main {
 #eigene_beitraege {
 	display: block;
 }
+.contentskriza .post-bar .stream_descp {
+	float: left;
+	width: 100%;
+}
+
+.contentskriza .post-bar .stream_descp h3 {
+	color: #333;
+	font-size: 16px;
+	font-weight: 600;
+	margin-bottom: 15px;
+}
+
+.contentskriza .post-bar .stream_descp .stream_video video {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+
+
+.contentskriza .post-bar .stream_descp .stream_info {
+	float: left;
+	width: 100%;
+	margin-bottom: 22px;
+}
+
+.contentskriza .post-bar .stream_descp .stream_info p {
+	color: #666666;
+	font-size: 15px;
+	line-height: 24px;
+	margin-bottom: 20px;
+}
+
+#my-video.video-js {
+	width: 100%;
+	max-height: 500px;
+}
+
+.contentskriza .post-bar .stream_descp .stream_info p span {
+	color: #080525;
+	font-weight: 600;
+}
+.contentskriza .post-bar .stream_descp .stream_video {
+	float: left;
+	width: 100%;
+	margin-bottom: 22px;
+}
+.contentskriza .post-bar .stream_descp .stream_video video {
+	width: 100%;
+	height: auto;
+	object-fit: contain; /* The video will not be wider or taller than its container */
+}
 
 
 /* ============ post-topbar =========== */
@@ -1129,6 +1180,12 @@ main {
 	padding: 20px;
 	box-shadow: 0px 2px #e4e4e4;
 }
+.contentskriza .post-bar .job_descp video {
+	width: 100%;  /* Video takes the full width */
+	height: auto; /* Height adjusts automatically to keep aspect ratio */
+	margin-bottom: 10px; /* Space below the video */
+}
+
 .post_topbar {
 	float: left;
 	width: 100%;
@@ -1304,6 +1361,15 @@ main {
 }
 .bid_now:hover {
 	color: #fff;	
+}
+.repost-info {
+	color: #777; /* Dark gray color */
+	font-size: 15px; /* Slightly bigger text */
+	padding: 10px; /* Some padding to make it stand out more */
+	background-color: #f2f2f2; /* Light gray background */
+	border-radius: 5px; /* Rounded corners */
+	margin-bottom: 10px; /* Some space between this info and the rest of the post */
+	font-weight: bold; /* Bold text */
 }
 
 

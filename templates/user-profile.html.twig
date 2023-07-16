@@ -16,8 +16,9 @@
     <link rel="stylesheet" type="text/css" href="assets/lib/slick/slick-theme.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <link rel="stylesheet" type="text/css" href="assets/css/responsive.css">
+    <link href="https://vjs.zencdn.net/7.11.4/video-js.css" rel="stylesheet" />
+    <script src="https://vjs.zencdn.net/7.11.4/video.min.js"></script>
     <link rel="icon" href="assets/favicon_white.ico" type="image/x-icon">
-
     {% include 'scripts.html.twig' %}
 
 </head>
@@ -80,7 +81,7 @@
                                         <ul>
                                             <li><a href="#eigene_beitraege">📝 Own Posts</a></li>
                                             <li><a href="#reposts">🔄 Reposts</a></li>
-                                            <li><a href="#storys">🎭 Livestreams</a></li>
+                                            <li><a href="#livestreams">🎭 Livestreams</a></li>
                                         </ul>
                                     </div>
                                     <div class="posts-section">
@@ -210,6 +211,9 @@
                                         <div id="reposts" class="contentskriza">
                                             <div class="post-bar">
                                                 <div class="post_topbar">
+                                                    <div class="repost-info">
+                                                        &#x21AA; Reposted by <a href="#">Username</a>
+                                                    </div>
                                                     <div class="usy-dt">
                                                         <img src="assets/images/resources/us-pic.png" alt="">
                                                         <div class="usy-name">
@@ -269,7 +273,7 @@
                                                 </div>
                                             </div><!--post-bar end-->
                                         </div>
-                                        <div id="storys" class="contentskriza">
+                                        <div id="livestreams" class="contentskriza">
                                             <div class="post-bar">
                                                 <div class="post_topbar">
                                                     <div class="usy-dt">
@@ -280,8 +284,7 @@
                                                         </div>
                                                     </div>
                                                     <div class="ed-opts">
-                                                        <a href="#" title="" class="ed-opts-open"><i
-                                                                    class="la la-ellipsis-v"></i></a>
+                                                        <a href="#" title="" class="ed-opts-open"><i class="la la-ellipsis-v"></i></a>
                                                         <ul class="ed-options">
                                                             <li><a href="#" title="">Edit Post</a></li>
                                                             <li><a href="#" title="">Unsaved</a></li>
@@ -293,8 +296,7 @@
                                                 </div>
                                                 <div class="epi-sec">
                                                     <ul class="descp">
-                                                        <li><img src="assets/images/icon8.png"
-                                                                 alt=""><span>Skriza for Android</span></li>
+                                                        <li><img src="assets/images/icon8.png" alt=""><span>Skriza for Android</span></li>
                                                         <li><img src="assets/images/icon9.png" alt=""><span>India</span></li>
                                                     </ul>
                                                     <ul class="bk-links">
@@ -302,17 +304,16 @@
                                                         <li><a href="#" title=""><i class="la la-envelope"></i></a></li>
                                                     </ul>
                                                 </div>
-                                                <div class="job_descp">
-                                                    <h3>Example Post</h3>
-                                                    <ul class="job-dt">
-                                                        <li><img src="https://dummyimage.com/512.png/09f/fff" alt="">
-                                                        </li>
-                                                    </ul>
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-                                                        luctus hendrerit metus, ut ullamcorper quam finibus at. Etiam id
-                                                        magna sit amet... <a href="#" title="">view more</a></p>
+                                                <div class="stream_descp">
+                                                    <h3>Example Livestream</h3>
+                                                    <div class="stream_video">
+                                                        <video id="my-video" class="video-js vjs-theme-city" controls preload="auto" data-setup="{}">
+                                                            <source src="uploads/livestreams/01_example.mp4" type="video/mp4">
+                                                        </video>
+                                                    </div>
                                                     <ul class="skill-tags">
-                                                        <li><a href="#" title="">Example</a></li>
+                                                        <li><a href="#" title=""><i class="fas fa-eye"></i> Live: <span id="live-viewers">500</span></a></li>
+                                                        <li><a href="#" title=""><i class="fas fa-clock"></i> Duration: <span id="stream-duration">1h 30m</span></a></li>
                                                         <li><a href="#" title="">Hashtag</a></li>
                                                         <li><a href="#" title="">Viral</a></li>
                                                     </ul>
@@ -324,8 +325,7 @@
                                                             <img src="assets/images/liked-img.png" alt="">
                                                             <span>25</span>
                                                         </li>
-                                                        <li><a href="#" class="com"><i class="fas fa-comment-alt"></i>
-                                                                Comment 15</a></li>
+                                                        <li><a href="#" class="com"><i class="fas fa-comment-alt"></i> Comment 15</a></li>
                                                     </ul>
                                                     <a href="#"><i class="fas fa-eye"></i>Views 50</a>
                                                 </div>
@@ -515,3 +515,16 @@
     </main>
 
 {% include 'footer.html.twig' %}
+<script>
+    var player = videojs('my-video', {
+        controls: true,
+        fluid: true,
+        responsive: true,
+        fullscreen: {
+            options: {
+                navigationUI: 'hide'
+            }
+        }
+    });
+    player.poster('path/to/your/poster.jpg');
+</script>
