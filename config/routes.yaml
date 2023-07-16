@@ -17,16 +17,16 @@ homepage_alternative:
   methods: [ GET ]
 
 #My_Profile
-my_profile:
-  path: /myprofile
+profile:
+  path: /profile
   controller: App\Controller\ProfileController::index
 
-my_profile_alternative_2:
-  path: /myprofile
+profile_alternative_2:
+  path: /profile
   controller: App\Controller\ProfileController::index
 
-my_profile_alternative_3:
-  path: /meinprofil
+profile_alternative_3:
+  path: /profil
   controller: App\Controller\ProfileController::index
 
 

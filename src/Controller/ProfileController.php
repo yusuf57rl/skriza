@@ -9,9 +9,9 @@ use Symfony\Component\Routing\Annotation\Route;
 class ProfileController extends AbstractController
 {
     /**
-     * @Route("/my_profile", name="my_profile")
-     *  @Route("/myprofile", name="my_profile_alternative_2")
-     *  @Route("/meinprofil", name="my_profile_alternative_3")
+     * @Route("/profile", name="profile")
+     *  @Route("/profile", name="profile_alternative_2")
+     *  @Route("/profil", name="profile_alternative_3")
      */
     public function index()
     {
