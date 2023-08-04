@@ -1,6 +1,5 @@
 ![Skriza Logo](https://skriza.com/assets/images/logo.png)
 
-
 Willkommen zu **Skriza** - der zukunftsorientierten Online-Plattform, die ihre Nutzer durch einzigartige Inhalte vernetzt und belohnt.
 
 ---
@@ -13,6 +12,8 @@ Willkommen zu **Skriza** - der zukunftsorientierten Online-Plattform, die ihre N
 
 Unser einzigartiges Taler-Belohnungsprogramm bietet eine aufregende Möglichkeit, das Erlebnis auf **Skriza** zu verbessern. Als Nutzer können Sie Talers verdienen, indem Sie aktiv teilnehmen und zur Community beitragen. Jeder Ihrer Beiträge wird automatisch einem Sentiment-Wert zugeordnet, basierend auf unseren eigenen fortschrittlichen Algorithmen, die dazu beitragen, eine konstruktive und positive Atmosphäre in der gesamten Community zu fördern.
 
+Die Talers können sowohl auf unserer Plattform für zusätzliche Sichtbarkeit Ihrer Beiträge als auch bei unseren externen Partnern für Gutscheine ausgegeben werden. Bei Interesse an einer Partnerschaft kontaktieren Sie uns bitte unter [contact@skriza.com](mailto:contact@skriza.com). 
+
 Die vollständigen Richtlinien und Details zum Taler-Belohnungsprogramm können auf unserem [Discord-Server](https://discord.gg/U6y3B9ncS8) eingesehen werden.
 
 ---
@@ -24,6 +25,12 @@ Die vollständigen Richtlinien und Details zum Taler-Belohnungsprogramm können 
 2. **Stories:** Teilen Sie Ihre Erlebnisse, Gedanken und Ideen durch unsere Story-Funktion, um Ihre eigene einzigartige Geschichte zu erzählen.
 
 3. **Sentiment-Wert:** Jeder Ihrer Beiträge wird durch unsere fortschrittlichen Algorithmen automatisch einem Sentiment-Wert zugeordnet, der die Qualität und den positiven Einfluss Ihres Beitrags widerspiegelt.
+
+---
+
+### Skriza Hackathon 2023
+
+Wir freuen uns, den Skriza Hackathon 2023 ankündigen zu dürfen! Dies ist eine großartige Gelegenheit für Entwickler, ihre Fähigkeiten unter Beweis zu stellen und zur Entwicklung von Skriza beizutragen. Wir laden alle Entwickler ein, sich zu beteiligen und mit uns an der Zukunft von Skriza zu arbeiten.
 
 ---
 
