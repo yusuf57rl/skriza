@@ -1,4 +1,4 @@
-# ![Skriza Logo]([path-to-logo.png](https://skriza.com/assets/images/wd-logo.png))
+![Skriza Logo](https://skriza.com/assets/images/wd-logo.png)
 
 Willkommen zu **Skriza** - der zukunftsorientierten Online-Plattform, die ihre Nutzer durch einzigartige Inhalte vernetzt und belohnt.
 
