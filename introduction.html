@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Introduction - Skriza</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+<script>
+  // Check the preferred mode in localStorage and apply it immediately
+  if (localStorage.getItem("theme") === "dark") {
+    document.body.style.backgroundColor = "#333";
+    document.querySelector(".container").style.backgroundColor = "#444";
+  }
+</script>
+
+<div class="container mt-5 text-center" id="main">
+  <div class="theme-container mb-5">
+    <div class="dark-btn">
+      <i class="fa fa-moon-o" style="font-size:24px; color: #fdd522;"></i>
+    </div>
+    <div class="light-btn">
+      <i class="fa fa-sun-o" style="font-size:24px; color: #ff6d05;"></i>
+    </div>
+  </div>
+  <h1>Introduction to Skriza</h1>
+  <p class="lead">
+    Skriza is revolutionizing the way opinions are exchanged and discussed online.
+  </p>
+
+  <h2>For Investors</h2>
+  <p>
+    We are developing a platform that offers a unique perspective on online discussions. Our sentiment analysis tool, combined with user-driven content, allows for rich and meaningful conversations on the internet.
+  </p>
+  <p>
+    Our vision is to create a space where users feel valued and heard, and where every opinion can be analyzed and understood in depth.
+  </p>
+  <p>
+    We are looking for partners who share our vision and are interested in investing in our journey to reshape online interactions.
+  </p>
+
+  <div class="skrsocial social-links">
+    <a href="https://github.com/yusuf57rl/skriza" target="_blank" class="btn btn-dark"><i class="fab fa-github"></i> GitHub</a>
+    <a href="https://www.instagram.com/skriza_com" target="_blank" class="btn btn-primary"><i class="fab fa-instagram"></i> Instagram</a>
+    <a href="https://discord.gg/U6y3B9ncS8" target="_blank" class="btn btn-discord"><i class="fab fa-discord"></i> Discord</a>
+    <a href="/introduction" target="_blank" class="btn btn-info"><i class="fas fa-info-circle"></i> Introduction</a>
+  </div>
+</div>
+<footer class="mt-5">
+  <a href="/index" class="text-muted"><i class="fas fa-home"></i> Home</a> |
+  <a href="/imprint" class="text-muted"><i class="fas fa-info-circle"></i> Legal Notice</a> |
+  <a href="/privacy" class="text-muted"><i class="fas fa-user-secret"></i> Privacy Policy</a>
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="js/slideshow.js"></script>
+<script src="js/switcher.js"></script>
+</body>
+
+</html>

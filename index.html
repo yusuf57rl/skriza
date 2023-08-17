@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skriza</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+<body>
+<script>
+  // Überprüfen Sie den bevorzugten Modus im localStorage und wenden Sie ihn sofort an
+  if (localStorage.getItem("theme") === "dark") {
+    document.body.style.backgroundColor = "#333";
+    document.querySelector(".container").style.backgroundColor = "#444";
+    document.querySelector(".preview-section").style.backgroundColor = "#555"; // Hintergrundfarbe für den Dark Mode des .preview-section Bereichs
+    // Fügen Sie hier alle anderen Stiländerungen für den Dark Mode hinzu
+  }
+</script>
+  <div class="container mt-5 text-center" id="main">
+  <div class="theme-container">
+    <div class="dark-btn">
+      <i class="fa fa-moon-o" style="font-size:24px; color: #fdd522;"></i>
+    </div>
+    <div class="light-btn">
+      <i class="fa fa-sun-o" style="font-size:24px; color: #ff6d05;"></i>
+    </div>
+  </div>
+  <h1>Welcome to Skriza <img src="img/Skriza_Icons-02_transparent.png" class="skrizalogo" alt="logo"></h1>
+  <p class="lead">
+    Redefining the way opinions are shared and discussed online.
+  </p>
+  <div class="preview-section mb-4 position-relative">
+    <button id="prevBtn" class="btn btn-light">&#10094;</button>
+    <img src="img/nHHfuj9bIJ.png" alt="Skriza Preview" class="img-fluid rounded previewskriza" id="mainImage" data-description="">
+    <button id="nextBtn" class="btn btn-light">&#10095;</button>
+  </div>
+  <div id="fullscreenOverlay" class="position-fixed w-100 h-100 top-0 left-0 d-none justify-content-center align-items-center" style="background-color: rgba(0,0,0,0.8); z-index: 100;">
+    <button id="fullscreenPrevBtn" class="btn btn-light position-absolute" style="left: 10px;">&#10094;</button>
+    <div class="text-center">
+      <img src="" alt="Vollbild Vorschau" id="fullscreenImage" class="img-fluid rounded">
+      <div id="imageNav" class="mt-2"></div>
+      <p class="text-white mt-3" id="imageDescription"></p>
+    </div>
+    <button id="fullscreenNextBtn" class="btn btn-light position-absolute" style="right: 10px;">&#10095;</button>
+  </div>
+
+  <p>
+    We are in the development phase and actively seeking investors to join our journey.
+  </p>
+    <div class="skrsocial social-links">
+    <a href="https://github.com/yusuf57rl/skriza" target="_blank" class="btn btn-dark"><i class="fab fa-github"></i> GitHub</a>
+    <a href="https://www.instagram.com/skriza_com" target="_blank" class="btn btn-primary"><i class="fab fa-instagram"></i> Instagram</a>
+    <a href="https://discord.gg/U6y3B9ncS8" target="_blank" class="btn btn-discord"><i class="fab fa-discord"></i> Discord</a>
+    <a href="/introduction" target="_blank" class="btn btn-info"><i class="fas fa-info-circle"></i> Introduction</a>
+  </div>
+</div>
+<footer class="mt-5">
+  <a href="/imprint" class="text-muted"><i class="fas fa-info-circle"></i> Legal Notice</a> |
+  <a href="/privacy" class="text-muted"><i class="fas fa-user-secret"></i> Privacy Policy</a>
+</footer>
+
+<!-- Bootstrap JS, Popper.js, and jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="js/slideshow.js"></script>
+<script src="js/switcher.js"></script>
+</body>
+
+</html>

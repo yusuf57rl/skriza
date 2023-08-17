@@ -1,0 +1,8 @@
+RewriteEngine On
+
+# Wenn die Anfrage ein tatsächliches Datei- oder Verzeichnisnamen ist, überspringen Sie die folgenden Regeln
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Entfernen Sie .html von URLs
+RewriteRule ^(.*)$ $1.html [L]

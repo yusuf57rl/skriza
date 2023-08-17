@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Legal Notice - Skriza</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <style>
+    h1{
+      font-size: 1.5rem;
+      margin-top: 1.5rem;
+    }
+    h2 {
+      font-size: 1.4rem;
+      margin-top: 1.4rem;
+    }
+    p {
+      margin-bottom: 1.5rem;
+    }
+  </style>
+</head>
+
+<body>
+
+<script>
+  // Check the preferred mode in localStorage and apply it immediately
+  if (localStorage.getItem("theme") === "dark") {
+    document.body.style.backgroundColor = "#333";
+    document.querySelector(".container").style.backgroundColor = "#444";
+  }
+</script>
+
+<div class="container mt-5 text-center" id="main">
+  <div class="theme-container">
+    <div class="dark-btn">
+      <i class="fa fa-moon-o" style="font-size:24px; color: #fdd522;"></i>
+    </div>
+    <div class="light-btn">
+      <i class="fa fa-sun-o" style="font-size:24px; color: #ff6d05;"></i>
+    </div>
+  </div>
+  <h1>Legal Notice</h1>
+  <p class="lead mb-5">
+    Here you will find all the legal information about Skriza.
+  </p>
+  <h2>Company Information</h2>
+  <p>
+    Skriza is a project by <a href="http://log-sysdev.de">Log-System Development</a>. We are considering establishing a separate business entity for this project in the future, should there be interested investors.
+  </p>
+
+  <h2>Information in accordance with Section 5 TMG</h2>
+  <p>
+    Yusuf Senel<br>
+    Log-System Development<br>
+    Uhlandstraße 2<br>
+    40764 Langenfeld (Rheinland)
+  </p>
+
+  <h2>Contact</h2>
+  <p>
+    Phone: +4921731600713<br>
+    Email: contact@skriza.de
+  </p>
+
+  <h2>EU Dispute Resolution</h2>
+  <p>
+    The European Commission provides a platform for online dispute resolution (ODR): <a href="https://ec.europa.eu/consumers/odr/" target="_blank">https://ec.europa.eu/consumers/odr/</a>.<br>
+    Our e-mail address can be found above in the imprint.
+  </p>
+
+  <h2>Consumer Dispute Resolution/Universal Mediation Body</h2>
+  <p>
+    We are neither willing nor obliged to participate in dispute resolution proceedings before a consumer mediation body.
+  </p>
+
+  <div class="skrsocial social-links">
+    <a href="https://github.com/yusuf57rl/skriza" target="_blank" class="btn btn-dark"><i class="fab fa-github"></i> GitHub</a>
+    <a href="https://www.instagram.com/skriza_com" target="_blank" class="btn btn-primary"><i class="fab fa-instagram"></i> Instagram</a>
+    <a href="https://discord.gg/U6y3B9ncS8" target="_blank" class="btn btn-discord"><i class="fab fa-discord"></i> Discord</a>
+    <a href="/introduction" target="_blank" class="btn btn-info"><i class="fas fa-info-circle"></i> Introduction</a>
+  </div>
+</div>
+<footer class="mt-5">
+  <a href="/index" class="text-muted"><i class="fas fa-home"></i> Home</a> |
+  <a href="/imprint" class="text-muted"><i class="fas fa-info-circle"></i> Legal Notice</a> |
+  <a href="/privacy" class="text-muted"><i class="fas fa-user-secret"></i> Privacy Policy</a>
+</footer>
+
+<!-- Bootstrap JS, Popper.js, and jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="js/slideshow.js"></script>
+<script src="js/switcher.js"></script>
+</body>
+
+</html>
