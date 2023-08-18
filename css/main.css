@@ -1,7 +1,70 @@
 body {
   font-family: 'Arial', sans-serif;
+  background-color: #333; /* Startet mit Dunkelmodus */
+  color: #fff; /* Startet mit weißem Text */
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.light-mode {
   background-color: #c9c9c9;
-  color: #333;
+  color: #000; /* Schwarz */
+}
+
+body.light-mode .main-content {
+  color: #000; /* Schwarz */
+}
+body.dark-mode {
+  background-color: #333;
+  color: white;
+}
+
+body.dark-mode a:not(.btn-dark):not(.btn-primary):not(.btn-discord) {
+  color: white;
+}
+
+body.dark-mode .navbar-brand,
+body.dark-mode .navbar-nav .nav-link {
+  color: white;
+}
+
+body.dark-mode .navbar-toggler-icon {
+  background-color: rgba(255,255,255,.5);
+}
+
+body.dark-mode .theme-switcher:hover {
+  color: white;
+}
+
+/* Die Textfarbe der Social-Media-Buttons bleibt im Light-Mode und im Dark-Mode weiß */
+.btn-dark, .btn-primary, .btn-discord {
+  color: #fff !important;
+}
+
+h1 {
+  font-family: 'Dancing Script', cursive;
+  font-weight: 700; /* Für eine etwas dickere Schrift */
+}
+
+/* Textfarbe für Links im Light-Modus */
+body.light-mode a {
+  color: #000; /* Schwarz */
+}
+
+
+.light-mode .navbar-dark .navbar-brand,
+.light-mode .navbar-dark .navbar-nav .nav-link {
+  color: black;
+}
+
+.light-mode .navbar-dark .navbar-toggler-icon {
+  background-color: rgba(0,0,0,.5);
+}
+
+.light-mode .theme-switcher:hover {
+  color: black;
+}
+body.light-mode .main-content {
+  color: #000; /* Schwarz */
 }
 
 .container {
@@ -106,6 +169,33 @@ body {
   border: none;
   color: #ffffff;
 }
+.navbar-logo{
+  padding: 15px;
+  color: #fff;
+}
+.navbar-mainbg{
+  background-color: #5161ce;
+  padding: 0px;
+}
+.main-content {
+  padding: 30px;
+}
+
+.navbar-dark .navbar-toggler {
+  border-color: rgba(255,255,255,.1);
+}
+
+.navbar-dark .navbar-toggler-icon {
+  background-color: rgba(255,255,255,.5);
+}
+
+.theme-switcher {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: color 0.3s;
+}
 
 footer {
   position: relative;
@@ -116,15 +206,32 @@ footer {
   margin-bottom: 30px;
 }
 .theme-container {
-  width: 180px;
-  height: 68px;
-  border-radius: 50px;
-  border: 5px solid #333;
   display: flex;
   align-items: center;
   justify-content: space-around;
   margin: auto;
 }
+.theme-switcher {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.theme-switcher:hover {
+  color: #fff; /* Farbwechsel beim Hover */
+}
+
+.theme-switcher .dark-btn, .theme-switcher .light-btn {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.theme-switcher i {
+  font-size: 14px;
+}
+
 
 .light-btn, .dark-btn {
   cursor: pointer;
@@ -133,16 +240,16 @@ footer {
 .light-active {
   background-color: #1f1f1f;
   margin: 0px 5px;
-  width: 50px;
-  height: 50px;
+  width: 20px;
+  height: 20px;
   border-radius: 50px;
 }
 
 .dark-active {
   background-color: #333;
   margin: 0px 5px;
-  width: 50px;
-  height: 50px;
+  width: 20px;
+  height: 20px;
   border-radius: 50px;
 }
 

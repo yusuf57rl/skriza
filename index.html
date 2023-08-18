@@ -11,28 +11,44 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/main.css">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-<body>
-<script>
-  if (localStorage.getItem("theme") === "dark") {
-    document.body.style.backgroundColor = "#333";
-    document.querySelector(".container").style.backgroundColor = "#444";
-    document.querySelector(".preview-section").style.backgroundColor = "#555";
-  }
-</script>
-<div class="spcthm"></div>
 <div class="theme-container">
-  <div class="dark-btn">
-    <i class="fa fa-moon-o" style="font-size:24px; color: #fdd522;"></i>
-  </div>
-  <div class="light-btn">
-    <i class="fa fa-sun-o" style="font-size:24px; color: #ff6d05;"></i>
-  </div>
 </div>
-  <div class="container mt-5 text-center" id="main">
-  <h1>Welcome to Skriza <img src="img/Skriza_Icons-02_transparent.png" class="skrizalogo" alt="logo"></h1>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Skriza</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="javascript:void(0);"><i class="fas fa-home"></i> Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="javascript:void(0);"><i class="fas fa-info-circle"></i> Introduction</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="javascript:void(0);"><i class="fas fa-envelope"></i> Contact Us</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link theme-switcher" href="javascript:void(0);">
+          <div class="dark-btn">
+            <i class="fa fa-moon-o"></i>
+          </div>
+          <div class="light-btn">
+            <i class="fa fa-sun-o"></i>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<div class="main-content mt-5 text-center">
+  <h1>Welcome to Skriza <img src="img/Skriza_Icons-02_transparent.png" class="skrizalogo logo-image" alt="logo" id="logoImg">
+  </h1>
   <p class="lead">
     Redefining the way opinions are shared and discussed online.
   </p>
@@ -69,8 +85,43 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<!-- Andere Skripte -->
 <script src="js/slideshow.js"></script>
 <script src="js/switcher.js"></script>
+
+<script>
+  // Funktion, um den aktuellen Modus zu überprüfen und das Logo und die Textfarbe entsprechend zu aktualisieren
+  function updateTheme() {
+    const isDarkMode = document.body.classList.contains("dark-mode");
+    const logoImg = document.getElementById("logoImg");
+    const allTextElements = document.querySelectorAll("h1, p, a, li");
+
+    if (isDarkMode) {
+      logoImg.src = "img/Skriza_Icons-02_transparent_lightmode.png";
+      allTextElements.forEach(el => el.style.color = "white");
+      document.body.style.backgroundColor = "#333";
+    } else {
+      logoImg.src = "img/Skriza_Icons-02_transparent.png";
+      allTextElements.forEach(el => el.style.color = "black");
+      document.body.style.backgroundColor = "#c9c9c9";
+    }
+  }
+
+  // Event Listener für die Sonnen- und Mondsymbole
+  document.querySelector(".dark-btn").addEventListener("click", function() {
+    document.body.classList.add("dark-mode");
+    updateTheme();
+  });
+
+  document.querySelector(".light-btn").addEventListener("click", function() {
+    document.body.classList.remove("dark-mode");
+    updateTheme();
+  });
+
+  // Beim ersten Laden der Seite Thema basierend auf dem aktuellen Modus aktualisieren
+  updateTheme();
+
+</script>
 </body>
 
 </html>
