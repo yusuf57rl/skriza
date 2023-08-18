@@ -112,7 +112,9 @@ footer {
   width: 100%;
   text-align: center;
 }
-
+.spcthm{
+  margin-bottom: 30px;
+}
 .theme-container {
   width: 180px;
   height: 68px;
@@ -159,5 +161,21 @@ footer {
 
   .container {
     padding: 20px;
+  }
+
+  .theme-container {
+    margin-bottom: 20px;
+  }
+
+  .btn-dark, .btn-primary, .btn-discord, .btn-info {
+    padding: 8px 18px; /* Reduzierte Polsterung */
+    margin-bottom: 10px; /* Abstand zwischen den Schaltflächen hinzugefügt */
+    font-size: 0.9rem; /* Reduzierte Schriftgröße (optional) */
+    display: block; /* Jeder Button nimmt eine eigene Zeile ein */
+  }
+
+  .social-links a:not(:last-child) {
+    margin-right: 0; /* Entfernen Sie den rechten Abstand von allen Buttons außer dem letzten */
+    margin-bottom: 5px; /* Abstand zum nächsten Button hinzufügen */
   }
 }
