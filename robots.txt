@@ -1,5 +1,6 @@
-# www.robotstxt.org/
-
-# Allow crawling of all content
 User-agent: *
 Disallow:
+Allow: /css/
+Allow: /js/
+Allow: /img/
+Sitemap: https://skriza.com/sitemap.xml
