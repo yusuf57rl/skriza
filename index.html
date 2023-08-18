@@ -16,12 +16,10 @@
 <body>
 <body>
 <script>
-  // Überprüfen Sie den bevorzugten Modus im localStorage und wenden Sie ihn sofort an
   if (localStorage.getItem("theme") === "dark") {
     document.body.style.backgroundColor = "#333";
     document.querySelector(".container").style.backgroundColor = "#444";
-    document.querySelector(".preview-section").style.backgroundColor = "#555"; // Hintergrundfarbe für den Dark Mode des .preview-section Bereichs
-    // Fügen Sie hier alle anderen Stiländerungen für den Dark Mode hinzu
+    document.querySelector(".preview-section").style.backgroundColor = "#555";
   }
 </script>
   <div class="container mt-5 text-center" id="main">
