@@ -3,12 +3,21 @@
   xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 
   <url>
     <loc>https://skriza.com/</loc>
     <lastmod>2023-08-18T21:49:56+00:00</lastmod>
     <priority>1.00</priority>
+    <image:image>
+      <image:loc>https://skriza.com/img/nHHfuj9bIJ.png</image:loc>
+      <image:caption>Skriza's main page: Discover the latest posts, share your thoughts, and initiate SkrizaRooms. An intuitive dashboard to connect with like-minded individuals.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://skriza.com/img/7QXA3vfDgd.png</image:loc>
+      <image:caption>Advanced search on Skriza: Filter posts by sentiment values, uncover current trends, and explore the latest or most popular posts. A powerful tool to find content tailored to your interests.</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://skriza.com/introduction</loc>
