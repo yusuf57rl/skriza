@@ -18,7 +18,9 @@ window.addEventListener("load", () => {
   } else {
     deactivateDarkMode();
   }
+  updateTheme(); // Diese Zeile hinzufügen
 });
+
 
 function activateDarkMode() {
   document.body.classList.add("dark-mode");
