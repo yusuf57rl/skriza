@@ -5,21 +5,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Legal Notice - Skriza</title>
-  <!-- Bootstrap CSS -->
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/main.css">
   <style>
-    h1{
+    h1 {
       font-size: 1.5rem;
       margin-top: 1.5rem;
     }
+
     h2 {
       font-size: 1.4rem;
       margin-top: 1.4rem;
     }
+
     p {
       margin-bottom: 1.5rem;
     }
@@ -27,24 +28,39 @@
 </head>
 
 <body>
+<div class="theme-container"></div>
 
-<script>
-  // Check the preferred mode in localStorage and apply it immediately
-  if (localStorage.getItem("theme") === "dark") {
-    document.body.style.backgroundColor = "#333";
-    document.querySelector(".container").style.backgroundColor = "#444";
-  }
-</script>
-
-<div class="container mt-5 text-center" id="main">
-  <div class="theme-container">
-    <div class="dark-btn">
-      <i class="fa fa-moon-o" style="font-size:24px; color: #fdd522;"></i>
-    </div>
-    <div class="light-btn">
-      <i class="fa fa-sun-o" style="font-size:24px; color: #ff6d05;"></i>
-    </div>
+<nav class="navbar navbar-expand-lg navbar-dark">
+  <a class="navbar-brand" href="#">Skriza</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="/index"><i class="fas fa-home"></i> Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/introduction"><i class="fas fa-info-circle"></i> Introduction</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="mailto:contact@skriza.com"><i class="fas fa-envelope"></i> Contact Us</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link theme-switcher" href="javascript:void(0);">
+          <div class="dark-btn">
+            <i class="fa fa-moon-o"></i>
+          </div>
+          <div class="light-btn">
+            <i class="fa fa-sun-o"></i>
+          </div>
+        </a>
+      </li>
+    </ul>
   </div>
+</nav>
+
+<div class="main-content mt-5 text-center">
   <h1>Legal Notice</h1>
   <p class="lead mb-5">
     Here you will find all the legal information about Skriza.
@@ -53,7 +69,6 @@
   <p>
     Skriza is a project by <a href="http://log-sysdev.de">Log-System Development</a>. We are considering establishing a separate business entity for this project in the future, should there be interested investors.
   </p>
-
   <h2>Information in accordance with Section 5 TMG</h2>
   <p>
     Yusuf Senel<br>
@@ -61,24 +76,20 @@
     Uhlandstraße 2<br>
     40764 Langenfeld (Rheinland)
   </p>
-
   <h2>Contact</h2>
   <p>
     Phone: +4921731600713<br>
     Email: contact@skriza.de
   </p>
-
   <h2>EU Dispute Resolution</h2>
   <p>
     The European Commission provides a platform for online dispute resolution (ODR): <a href="https://ec.europa.eu/consumers/odr/" target="_blank">https://ec.europa.eu/consumers/odr/</a>.<br>
     Our e-mail address can be found above in the imprint.
   </p>
-
   <h2>Consumer Dispute Resolution/Universal Mediation Body</h2>
   <p>
     We are neither willing nor obliged to participate in dispute resolution proceedings before a consumer mediation body.
   </p>
-
   <div class="skrsocial social-links">
     <a href="https://github.com/yusuf57rl/skriza" target="_blank" class="btn btn-dark"><i class="fab fa-github"></i> GitHub</a>
     <a href="https://www.instagram.com/skriza_com" target="_blank" class="btn btn-primary"><i class="fab fa-instagram"></i> Instagram</a>
@@ -98,6 +109,34 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script src="js/slideshow.js"></script>
 <script src="js/switcher.js"></script>
-</body>
 
+<!-- Dark/Light Mode Toggle Script -->
+<script>
+  function updateTheme() {
+    const isDarkMode = document.body.classList.contains("dark-mode");
+    const allTextElements = document.querySelectorAll("h1, h2, p, a, li");
+
+    if (isDarkMode) {
+      allTextElements.forEach(el => el.style.color = "white");
+      document.body.style.backgroundColor = "#333";
+    } else {
+      allTextElements.forEach(el => el.style.color = "black");
+      document.body.style.backgroundColor = "#ffffff";
+    }
+  }
+
+  document.querySelector(".dark-btn").addEventListener("click", function() {
+    document.body.classList.add("dark-mode");
+    updateTheme();
+  });
+
+  document.querySelector(".light-btn").addEventListener("click", function() {
+    document.body.classList.remove("dark-mode");
+    updateTheme();
+  });
+
+  // Initialize theme on page load
+  updateTheme();
+</script>
+</body>
 </html>
