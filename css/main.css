@@ -218,12 +218,24 @@ body:not(.dark-mode) .navbar-light .navbar-brand {
 }
 
 .theme-switcher {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: color 0.3s;
+  position: relative;
+  overflow: hidden;
 }
+
+.theme-switcher::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background-color: rgba(255, 255, 255, 0.4);  /* Ein semi-transparenter weißer Kreis */
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  animation: pulseEffect 1.5s infinite;
+}
+
 
 footer {
   position: relative;
@@ -238,13 +250,6 @@ footer {
   align-items: center;
   justify-content: space-around;
   margin: auto;
-}
-.theme-switcher {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: color 0.3s;
 }
 
 .theme-switcher:hover {
@@ -321,6 +326,6 @@ footer {
   75% { transform: translateX(-2px); }
   100% { transform: translateX(2px); }
 }
-.navbar-toggler:not(.collapsed) {
-  animation: vibrate 0.2s infinite;
+.theme-switcher.vibrate {
+  animation: vibrate 0.3s infinite;
 }

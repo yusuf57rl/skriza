@@ -36,3 +36,10 @@ function deactivateDarkMode() {
   light.innerHTML = `<i class="fa fa-sun-o" style="font-size:24px; color: #ff6d05;"></i>`;
   dark.innerHTML = `<div class="dark-active"></div>`;
 }
+const themeSwitcher = document.querySelector('.theme-switcher');
+
+themeSwitcher.classList.add('vibrate'); // Beginnen Sie mit der Vibration
+
+themeSwitcher.addEventListener('click', function() {
+  this.classList.remove('vibrate');  // Stoppt die Vibration
+});
