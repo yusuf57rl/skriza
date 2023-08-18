@@ -6,8 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Skriza</title>
   <meta name="title" content="Skriza: Revolutionizing Online Discussions | Seeking Investors">
-  <meta name="keywords" content="Skriza, online discussions, opinion sharing, investors, online platform, meaningful interactions, digital space">
-  <meta name="description" content="Discover Skriza: A profound platform redefining online opinion sharing. Engage in meaningful discussions and be part of our innovative journey. Investors welcome.">
+  <meta name="keywords"
+        content="Skriza, online discussions, opinion sharing, investors, online platform, meaningful interactions, digital space">
+  <meta name="description"
+        content="Discover Skriza: A profound platform redefining online opinion sharing. Engage in meaningful discussions and be part of our innovative journey. Investors welcome.">
   <!-- Bootstrap CSS -->
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <!-- Font Awesome -->
@@ -20,9 +22,11 @@
 <body>
 <div class="theme-container">
 </div>
+
 <nav class="navbar navbar-expand-lg navbar-dark">
   <h1><a class="navbar-brand" href="https://skriza.com">Skriza.com</a></h1>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+          aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
@@ -49,17 +53,24 @@
     </ul>
   </div>
 </nav>
+
 <div class="main-content mt-5 text-center">
-  <h1>Welcome to Skriza: Redefining Online Opinion Sharing</h1> <img src="img/Skriza_Icons-02_transparent.png" class="skrizalogo logo-image" alt="Skriza Logo" id="logoImg">
+  <h1>Welcome to Skriza: Redefining Online Opinion Sharing</h1> <img src="img/Skriza_Icons-02_transparent.png"
+                                                                     class="skrizalogo logo-image" alt="Skriza Logo"
+                                                                     id="logoImg">
   <p class="lead">
-    Dive into a digital space where opinions are not just shared but profoundly discussed. Experience the future of online interactions.
+    Dive into a digital space where opinions are not just shared but profoundly discussed. Experience the future of
+    online interactions.
   </p>
   <div class="preview-section mb-4 position-relative">
     <button id="prevBtn" class="btn btn-light">&#10094;</button>
-    <img src="img/nHHfuj9bIJ.png" alt="Skriza Preview" class="img-fluid rounded previewskriza" id="mainImage" data-description="">
+    <img src="img/nHHfuj9bIJ.png" alt="Skriza Preview" class="img-fluid rounded previewskriza" id="mainImage"
+         data-description="">
     <button id="nextBtn" class="btn btn-light">&#10095;</button>
   </div>
-  <div id="fullscreenOverlay" class="position-fixed w-100 h-100 top-0 left-0 d-none justify-content-center align-items-center" style="background-color: rgba(0,0,0,0.8); z-index: 100;">
+  <div id="fullscreenOverlay"
+       class="position-fixed w-100 h-100 top-0 left-0 d-none justify-content-center align-items-center"
+       style="background-color: rgba(0,0,0,0.8); z-index: 100;">
     <button id="fullscreenPrevBtn" class="btn btn-light position-absolute" style="left: 10px;">&#10094;</button>
     <div class="text-center">
       <img src="" alt="Vollbild Vorschau" id="fullscreenImage" class="img-fluid rounded">
@@ -70,30 +81,32 @@
   </div>
 
   <p>
-    Skriza is in its pivotal development phase. We're inviting visionary investors to be part of this transformative journey in reshaping online opinion sharing.
+    Skriza is in its pivotal development phase. We're inviting visionary investors to be part of this transformative
+    journey in reshaping online opinion sharing.
   </p>
 
-    <div class="skrsocial social-links">
-    <a href="https://github.com/yusuf57rl/skriza" target="_blank" class="btn btn-dark"><i class="fab fa-github"></i> GitHub</a>
-    <a href="https://www.instagram.com/skriza_com" target="_blank" class="btn btn-primary"><i class="fab fa-instagram"></i> Instagram</a>
-    <a href="https://discord.gg/U6y3B9ncS8" target="_blank" class="btn btn-discord"><i class="fab fa-discord"></i> Discord</a>
+  <div class="skrsocial social-links">
+    <a href="https://github.com/yusuf57rl/skriza" target="_blank" class="btn btn-dark"><i class="fab fa-github"></i>
+      GitHub</a>
+    <a href="https://www.instagram.com/skriza_com" target="_blank" class="btn btn-primary"><i
+      class="fab fa-instagram"></i> Instagram</a>
+    <a href="https://discord.gg/U6y3B9ncS8" target="_blank" class="btn btn-discord"><i class="fab fa-discord"></i>
+      Discord</a>
   </div>
 </div>
 <footer class="mt-5">
-  <a href="/imprint" class="text-muted"><i class="fas fa-info-circle"></i> Legal Notice</a> <a href="#" class="text-muted">|</a>
+  <a href="/imprint" class="text-muted"><i class="fas fa-info-circle"></i> Legal Notice</a> <a href="#"
+                                                                                               class="text-muted">|</a>
   <a href="/privacy" class="text-muted"><i class="fas fa-user-secret"></i> Privacy Policy</a>
 </footer>
 
-<!-- Bootstrap JS, Popper.js, and jQuery -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<!-- Andere Skripte -->
 <script src="js/slideshow.js"></script>
 <script src="js/switcher.js"></script>
 
 <script>
-  // Funktion, um den aktuellen Modus zu überprüfen und das Logo und die Textfarbe entsprechend zu aktualisieren
   function updateTheme() {
     const isDarkMode = document.body.classList.contains("dark-mode");
     const logoImg = document.getElementById("logoImg");
@@ -110,18 +123,16 @@
     }
   }
 
-  // Event Listener für die Sonnen- und Mondsymbole
-  document.querySelector(".dark-btn").addEventListener("click", function() {
+  document.querySelector(".dark-btn").addEventListener("click", function () {
     document.body.classList.add("dark-mode");
     updateTheme();
   });
 
-  document.querySelector(".light-btn").addEventListener("click", function() {
+  document.querySelector(".light-btn").addEventListener("click", function () {
     document.body.classList.remove("dark-mode");
     updateTheme();
   });
 
-  // Beim ersten Laden der Seite Thema basierend auf dem aktuellen Modus aktualisieren
   updateTheme();
 
 </script>
