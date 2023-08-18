@@ -13,14 +13,15 @@ light.addEventListener("click", () => {
 });
 
 window.addEventListener("load", () => {
-  if (localStorage.getItem("theme") === "dark") {
+  // Überprüfen Sie, ob der Dark-Modus bereits in localStorage gesetzt ist, und setzen Sie ihn andernfalls standardmäßig
+  if (localStorage.getItem("theme") !== "light") {
     activateDarkMode();
+    localStorage.setItem("theme", "dark");  // Setzen Sie den Dark-Modus standardmäßig in localStorage
   } else {
     deactivateDarkMode();
   }
   updateTheme(); // Diese Zeile hinzufügen
 });
-
 
 function activateDarkMode() {
   document.body.classList.add("dark-mode");
