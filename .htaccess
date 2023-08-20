@@ -4,5 +4,10 @@ RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 
-# Entfernen Sie .html von URLs
+# Wenn die Anfrage ohne .html endet, wird versucht, auf die .html-Version umzuleiten, sofern sie existiert.
+RewriteCond %{REQUEST_FILENAME}.html -f
 RewriteRule ^(.*)$ $1.html [L]
+
+# Wenn die Anfrage mit .html endet und die Version ohne .html existiert, wird auf diese umgeleitet.
+RewriteCond %{DOCUMENT_ROOT}/$1 -f
+RewriteRule ^(.*)\.html$ /$1 [R=301,L]

@@ -4,6 +4,19 @@ body {
   color: #fff; /* Startet mit weißem Text */
   transition: background-color 0.3s, color 0.3s;
 }
+/* Icons im Light-Modus schwarz */
+body:not(.dark-mode) .fas.fa-comments,
+body:not(.dark-mode) .fas.fa-brain,
+body:not(.dark-mode) .fas.fa-users {
+  color: black !important;
+}
+
+/* Icons im Dark-Modus weiß */
+body.dark-mode .fas.fa-comments,
+body.dark-mode .fas.fa-brain,
+body.dark-mode .fas.fa-users {
+  color: white !important;
+}
 
 body.light-mode {
   background-color: #f7f7f7; /* Ein weiches Weiß */
@@ -21,6 +34,10 @@ body.light-mode a {
 
 body.light-mode a:hover {
   color: #0056b3; /* Ein dunkleres Blau für den Hover-Effekt */
+}
+.skrizafont {
+  font-family: 'Dancing Script', cursive;
+  font-weight: 700;
 }
 
 body.light-mode .navbar-dark .navbar-toggler-icon {
@@ -319,13 +336,14 @@ footer {
     margin-bottom: 5px; /* Abstand zum nächsten Button hinzufügen */
   }
 }
-@keyframes vibrate {
+@keyframes swing {
   0% { transform: translateX(0); }
-  25% { transform: translateX(-2px); }
-  50% { transform: translateX(2px); }
-  75% { transform: translateX(-2px); }
-  100% { transform: translateX(2px); }
+  20% { transform: translateX(-3px); }
+  40% { transform: translateX(3px); }
+  60% { transform: translateX(-3px); }
+  80% { transform: translateX(3px); }
+  100% { transform: translateX(0); }
 }
 .theme-switcher.vibrate {
-  animation: vibrate 0.3s infinite;
+  animation: swing 1.5s infinite;
 }

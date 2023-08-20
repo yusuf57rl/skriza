@@ -13,15 +13,31 @@ light.addEventListener("click", () => {
 });
 
 window.addEventListener("load", () => {
-  // Überprüfen Sie, ob der Dark-Modus bereits in localStorage gesetzt ist, und setzen Sie ihn andernfalls standardmäßig
-  if (localStorage.getItem("theme") !== "light") {
+  // Überprüfen Sie, ob der Dark-Modus bereits in localStorage gesetzt ist
+  if (localStorage.getItem("theme") === "dark") {
     activateDarkMode();
-    localStorage.setItem("theme", "dark");  // Setzen Sie den Dark-Modus standardmäßig in localStorage
   } else {
     deactivateDarkMode();
   }
-  updateTheme(); // Diese Zeile hinzufügen
+  updateTheme();
 });
+
+function updateTheme() {
+  const isDarkMode = document.body.classList.contains("dark-mode");
+  const allTextElements = document.querySelectorAll("h1, h2, p, a, li");
+  const largeIcons = document.querySelectorAll(".fas.fa-comments, .fas.fa-brain, .fas.fa-users");
+
+  if (isDarkMode) {
+    allTextElements.forEach(el => el.style.color = "white");
+    largeIcons.forEach(icon => icon.style.color = "white");  // Im Dark Mode weiß
+    document.body.style.backgroundColor = "#333";
+  } else {
+    allTextElements.forEach(el => el.style.color = "black");
+    largeIcons.forEach(icon => icon.style.color = "black");  // Im Light Mode schwarz
+    document.body.style.backgroundColor = "#ffffff";
+  }
+}
+
 
 function activateDarkMode() {
   document.body.classList.add("dark-mode");
@@ -36,6 +52,7 @@ function deactivateDarkMode() {
   light.innerHTML = `<i class="fa fa-sun-o" style="font-size:24px; color: #ff6d05;"></i>`;
   dark.innerHTML = `<div class="dark-active"></div>`;
 }
+
 const themeSwitcher = document.querySelector('.theme-switcher');
 
 themeSwitcher.classList.add('vibrate'); // Beginnen Sie mit der Vibration
