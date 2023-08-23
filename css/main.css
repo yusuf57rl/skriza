@@ -270,7 +270,7 @@ footer {
 }
 
 .theme-switcher:hover {
-  color: #fff; /* Farbwechsel beim Hover */
+  color: #fff;
 }
 
 .theme-switcher .dark-btn, .theme-switcher .light-btn {
@@ -310,7 +310,7 @@ footer {
   margin-top: 3rem;
 }
 
-/* Für die mobile Ansicht */
+
 @media (max-width: 768px) {
   footer {
     padding: 10px 0;

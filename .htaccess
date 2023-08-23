@@ -11,3 +11,6 @@ RewriteRule ^(.*)$ $1.html [L]
 # Wenn die Anfrage mit .html endet und die Version ohne .html existiert, wird auf diese umgeleitet.
 RewriteCond %{DOCUMENT_ROOT}/$1 -f
 RewriteRule ^(.*)\.html$ /$1 [R=301,L]
+
+# Wenn die oben genannten Bedingungen nicht erfüllt sind, leite zur 404.html um
+ErrorDocument 404 /404.html
