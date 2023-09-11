@@ -12,44 +12,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/hacktober.css">
   <link rel="canonical" href="https://skriza.com/hacktoberfest2023" />
 </head>
-<style>
-  .main-content {
-    padding-bottom: 100px;
-  }
-  .cta-section {
-    margin-bottom: 50px;
-  }
-  footer {
-    margin-top: 100px;
-  }
-  .hacktoberfest-banner {
-    margin-top: 40px;
-    margin-bottom: 40px;
-    cursor: pointer;
-    max-width: 30%;
-  }
-  .fullscreen-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0,0,0,0.8);
-    z-index: 1000;
-    display: none;
-    align-items: center;
-    justify-content: center;
-  }
-  .fullscreen-image {
-    max-width: 100%;
-    max-height: 100%;
-  }
-  .spcfrft{
-    padding-top: 2%;
-  }
-</style>
 <body>
 <div class="theme-container"></div>
 
@@ -94,7 +59,6 @@
     <img src="img/hacktoberfest_skriza.png" alt="Hacktoberfest 2023 with Skriza" class="hacktoberfest-banner" id="hacktoberfestBanner">
   </div>
 
-  <!-- What We're Looking For -->
   <div class="row features-section mt-4">
     <div class="col-md-4">
       <i class="fas fa-code fa-3x mb-3"></i>
@@ -141,7 +105,6 @@
 <script src="js/slideshow.js"></script>
 <script src="js/switcher.js"></script>
 
-<!-- Dark/Light Mode Toggle Script -->
 <script>
   function updateTheme() {
     const isDarkMode = document.body.classList.contains("dark-mode");
@@ -168,30 +131,6 @@
 
   updateTheme();
 </script>
-<script>
-
-  document.addEventListener("DOMContentLoaded", function() {
-    // Elemente auswählen
-    const hacktoberfestBanner = document.getElementById("hacktoberfestBanner");
-    const fullscreenOverlay = document.createElement("div");
-    const fullscreenImage = document.createElement("img");
-
-    fullscreenOverlay.className = 'fullscreen-overlay';
-    fullscreenImage.className = 'fullscreen-image';
-
-    document.body.appendChild(fullscreenOverlay);
-    fullscreenOverlay.appendChild(fullscreenImage);
-
-    hacktoberfestBanner.addEventListener("click", function() {
-      fullscreenImage.src = hacktoberfestBanner.src;
-      fullscreenOverlay.style.display = "flex";
-    });
-
-    fullscreenOverlay.addEventListener("click", function() {
-      fullscreenOverlay.style.display = "none";
-    });
-  });
-
-</script>
+<script src="js/hacktober.js"></script>
 </body>
 </html>
