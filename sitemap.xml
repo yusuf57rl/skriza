@@ -35,4 +35,11 @@
     <priority>0.80</priority>
   </url>
 
+  <!-- Hacktober Seite -->
+  <url>
+    <loc>https://skriza.com/hacktober</loc>
+    <lastmod>2023-09-13T00:00:00+00:00</lastmod>
+    <priority>0.95</priority>
+  </url>
+
 </urlset>
