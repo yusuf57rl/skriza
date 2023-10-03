@@ -8,12 +8,34 @@ function register(req, res) {
         }
         else {
             passport.authenticate("local")(req, res, () => {
-                // send to home or to desired page after successful registration
+                // Authentication successful, redirect to a protected route
             })
         }
     })
 }
 
+function login(req, res) {
+    passport.authenticate('local', (err, user) => {
+        if (err) {
+            console.error(err);
+            res.status(500).send('Internal Server Error');
+        } else if (!user) {
+            // User authentication failed
+            // send to login page again saying user does not exist or something like that
+        } else {
+            req.login(user, (err) => {
+                if (err) {
+                    console.error(err);
+                    res.status(500).send('Internal Server Error');
+                } else {
+                    // Authentication successful, redirect to a protected route
+                }
+            });
+        }
+    })(req, res);
+}
+
 module.exports = {
-    register
+    register,
+    login,
 };
